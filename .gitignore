@@ -9,5 +9,34 @@ __pycache__/
 
 # Virtualenv
 /venv
+venv3/
+*.venv/
+*.env/
 
+# Logs
+logs/
+*.log
 
+# Python environment
+*.python-version
+
+# Configuración de Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Carpetas de respaldo y sesiones
+.vscode-test/
+.code-nav/
+
+# Archivos de configuración específicos de VSC
+settings.json
+tasks.json
+launch.json
+
+# Extensiones y archivos de estado
+.vscode/extensions/
+.vscode/*.json
+
+# Historial de trabajo remoto
+.vscode/servers.json
+.vscode/storage.json
