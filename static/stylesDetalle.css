@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    font-family: arial; 
+    background-color: white;
+}
+
+/* Estilos para el título */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de la imagen */
+.imagen {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+/* Estilos para la imagen del producto */
+.imagen img {
+    width: 450px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.imagen:hover {
+    transform: scale(1.3);
+}
+
+/* Estilos para el nombre del producto */
+.nombre h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+    border-bottom: 1px solid #53e385;
+}
+
+/* Estilos para la descripción del producto */
+.descripcion h4 {
+    color: rgba(0, 0, 0, 0.775);
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-decoration: underline #53e385;
+}
+
+.descripcion p {
+    font-size: 20px;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #53e385;
+}
+
+/* Estilos para el precio del producto */
+.precio h4 {
+    color: #53e385;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.precio h6 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #53e385;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.precio p {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilos para las columnas */
+.left-column,
+.right-column {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilos para la columna derecha en el estado normal y al hacer hover */
+.right-column {
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.right-column:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+    .left-column {
+        width: 45%;
+    }
+
+    .right-column {
+        width: 45%;
+    }
+
+    .imagen:hover {
+        transform: scale(1.4);
+    }
+}

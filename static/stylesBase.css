@@ -1,0 +1,204 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+
+.nav-container {
+    
+    font-size: 40px;
+    background-color: #53e385;
+    display: flex;
+    justify-content: space-between; /* Esto separará los elementos al máximo en el contenedor */
+    align-items: center; /* Esto centrará verticalmente los elementos en el contenedor */
+}
+
+.logoEmpresa a{
+    text-decoration: none; 
+    margin-left: 40px;
+    
+}
+.logoEmpresa img {
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 550px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+.nav-btn {
+    background-color: #53e385;
+    color: white; /* Color del texto */
+    /*border: 1px solid white; */ border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    font-size: 40px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de fuente en negrita */
+    margin-right: 20px;
+    transition: 0.5s;
+  }
+  .nav-btn:hover {
+    color: black;
+    /*border: 1px solid black;*/
+  }
+
+.nav-links {
+    margin-right: 40px;
+}
+
+.nav-links a {
+    margin-left: 20px; /* Agrega un espacio entre los enlaces */
+    text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+    color: black; /* Cambia el color del texto de los enlaces */
+    font-weight: bold; /* Establece el peso de fuente en negrita */
+    font-size: 25px; /* Cambia el tamaño de fuente de los enlaces */
+    transition: 0.4s;
+    border-right: 1px solid #333;
+    box-shadow: 4px 4px 0px  rgba(0, 0, 0, 0.5);
+    padding-right: 20px;
+}
+
+/* Estilo cuando el mouse pasa por encima de los enlaces */
+.nav-links a:hover {
+    color: white; /* Cambia el color del texto al pasar el mouse */
+}
+
+.listaMenu a{
+    color: #53e385;
+    display: list-item;
+    font-size: 25px;
+    list-style: none;
+    margin-left: 35px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-family: arial; 
+    transition: 0.5s;
+}
+
+.listaMenu a:hover{
+    color: black;
+}
+
+/* Estilos para el botón de WhatsApp */
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    
+  }
+
+.whatsapp-button img {
+    width: 70px; /* Ajusta el ancho de la imagen del botón */
+    height: 70px; /* Ajusta la altura de la imagen del botón */
+    border-radius: 50%; /* Para hacer que la imagen sea un círculo */
+    border: 2px solid #1cd443; /* Color del borde */
+    background-color: #1cd443; /* Color de fondo del botón */
+    padding: 8px; /* Espacio alrededor de la imagen */
+}
+
+.offcanvas-header {/* seccion menu*/
+    color: white;
+    background-color: #53e385; 
+    font-family: arial; 
+}
+
+.offcanvas-header h4{
+    margin-left: 25px;
+}
+
+
+
+/* Estilos para pantallas de 1024px en adelante*/
+@media screen and (min-width: 1024px) {
+    
+    .nav-container .nav-btn{
+        display: none; /*eliminar*/
+    }
+    .nav-container .nav-links{
+        display: flex, inline-block;
+    }
+  }
+  
+  /* Estilos para pantallas medianas */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .nav-container .nav-links{
+        display: none;
+    }
+    .nav-container .nav-btn{
+        display: inline-block;
+    }
+    .logoEmpresa a{
+        margin-left: 40px;
+    }
+    .logoEmpresa img {
+        width: 400px;
+    }
+    .nav-btn{
+        font-size: 50px;
+        margin-top: 6px;
+    }
+  
+  }
+  @media screen and (min-width: 426px) and (max-width: 767px){
+    .nav-container .nav-links{
+        display: none;
+    }
+    .logoEmpresa a{
+        margin-left: 15px;
+    }
+    .logoEmpresa img {
+        width: 300px;
+    }
+    .nav-btn{
+        font-size: 35px;
+        margin-top: 6px;
+    }
+}
+  /* Estilos para pantallas pequeñas */
+  @media screen and (min-width: 320px) and (max-width: 425px){
+    .nav-container .nav-links{
+        display: none;
+    }
+    .logoEmpresa a{
+        margin-left: 15px;
+    }
+    .logoEmpresa img {
+        width: 240px;
+    }
+    .nav-btn{
+        font-size: 30px;
+        margin-top: 6px;
+    }
+    .listaMenu a{
+       
+        display: list-item;
+        font-size: 18px;
+        list-style: none;
+        margin-left: 35px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        
+    }
+    .offcanvas-header h4{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+  }
+  
+  

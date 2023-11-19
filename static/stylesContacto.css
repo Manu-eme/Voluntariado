@@ -1,0 +1,87 @@
+body {
+  background-image: url('/media/img_empresa/eco.jpg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+  background-position: center; /* Centra la imagen tanto vertical como horizontalmente */
+}
+h1{
+  background-color: #53e385;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  font-weight: bolder;
+}
+form {
+    background-color: #ffffffd4;
+    padding: 20px; /* Espacio interno del formulario */
+    border: 1px solid #53e385; /* Borde del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar horizontalmente el formulario */
+    margin-bottom: 50px;
+  }
+  
+  /* Estilo de las etiquetas */
+  label {
+    display: block; /* Hace que las etiquetas se muestren en una nueva línea */
+    font-weight: bold; /* Texto de etiquetas en negrita */
+    margin-top: 20px; /* Espacio superior entre etiquetas */
+  }
+  
+  /* Estilo de los campos de entrada de texto y correo electrónico */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%; /* Los campos de entrada ocupan todo el ancho del formulario */
+    padding: 10px; /* Espaciado interior de los campos */
+    margin: 5px 0; /* Espacio vertical entre campos */
+    border: 1px solid #53e385; /* Borde de los campos */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  
+  /* Estilo del botón de enviar */
+  input[type="submit"] {
+    background-color: #53e385; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 155px; /* Espaciado del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero al pasar el mouse */
+    font-size: 18px; /* Tamaño de fuente */
+    transition: 0.5s; /* Transición suave al pasar el mouse */
+    
+  }
+  
+  input[type="submit"]:hover {
+    color: white; /* Cambio de color al pasar el mouse */
+    background-color: black; /* Cambio de color de fondo al pasar el mouse */
+  }
+  
+  /* Estilo de las alertas de éxito */
+  .alert-success {
+    background-color: rgb(13, 247, 95); /* Color de fondo de las alertas de éxito */
+    color: black; /* Color del texto en las alertas */
+    padding: 10px; /* Espaciado interior de las alertas */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 10px; /* Espacio superior entre alertas */
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  @media (min-width: 320px) and (max-width: 425px){
+    form {
+      padding: 20px; /* Espacio interno del formulario */
+      max-width: 300px; /* Ancho máximo del formulario */
+      margin: 0 auto; /* Centrar horizontalmente el formulario */
+      margin-bottom: 50px;
+    }
+    input[type="submit"] {
+      padding: 10px 105px;
+      
+    }
+
+  }

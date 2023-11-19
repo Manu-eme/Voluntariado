@@ -1,0 +1,119 @@
+.pagination {
+    margin-top: 10px;
+    justify-content: center; 
+}
+.pag {
+    margin: 10px 0;
+}
+
+.link {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.link:hover {
+    color: white;
+    background-color:black;
+}
+
+.num-pag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #53e385;
+    color: #fff;
+    border: 1px solid #0000006a;
+    border-radius: 5px;
+}
+
+/* Estilos para el contenedor con la clase "botones" */
+.botones {
+    text-align: center;
+    margin-bottom: 15px; /* Ajusta el margen superior e inferior según tu diseño */
+}
+
+/* Estilos para el enlace "Primera" con la clase "primera" */
+.botones .primera {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #53e385;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #0000006a;
+    transition: 0.5s;
+}
+
+.botones .primera:hover {
+    background-color: black;
+}
+
+/* Estilos para el enlace "Anterior" con la clase "anterior" */
+.botones .anterior {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #53e385;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #0000006a;
+    transition: 0.5s;
+}
+
+.botones .anterior:hover {
+    background-color: black;
+}
+
+/* Estilos para el enlace "Siguiente" con la clase "siguiente" */
+.botones .siguiente {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #53e385;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #0000006a;
+    transition: 0.5s;
+}
+
+.botones .siguiente:hover {
+    background-color: black;
+}
+/* Estilos para el enlace "Siguiente" cuando es un elemento <span> */
+.botones .btn:last-child {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilos para el enlace "Última" con la clase "ultima" */
+.botones .ultima {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #53e385;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #0000006a;
+    transition: 0.5s;
+}
+
+.botones .ultima:hover {
+    background-color: black;
+}
+
+/* Estilos para el enlace "Anterior" y "Siguiente" cuando son elementos <span> */
+.botones .btn {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+

@@ -1,0 +1,72 @@
+<!-- lista_productos.html -->
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+   
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesProductos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesPaginacion.css' %}">
+</head>
+<body>
+    <h2>Productos</h2>
+   
+        <div>
+            <ul class="product-grid">
+                {% for producto in productos %}
+                <li class="product-item">
+                    {% if producto.imagen %}
+                            <img  src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" class="imagen">
+                    {% endif %}
+                    <h3 class="nombre">{{ producto.nombre }}</h3> 
+                    <h4 class="precio">${{ producto.precio_con_separador_de_miles }}</h4>
+
+                    <a href="{% url 'detalle' producto.id %}">
+                        <button class="btn-product" >Ver más</button>
+                    </a>           
+                </li>
+                    
+                {% endfor %}
+                <h4 class="descripcion">{{ producto.descripcion }}</h4>
+            </ul>
+
+        </div>
+            
+       
+        <!-- paginacion -->
+        <div class="pagination">
+            <span class="pag">
+                {% for page_num in productos.paginator.page_range %}
+                    {% if productos.number == page_num %}
+                    <span class="num-pag">{{ page_num }}</span>
+                {% elif page_num == productos.number|add:"-1" or page_num == productos.number|add:"1" %}
+                    <a href="?page={{ page_num }}" class="link">{{ page_num }}</a>
+                {% elif forloop.counter|divisibleby:5 %}
+                    <a href="?page={{ page_num }}" class="link">{{ page_num }}</a>
+                
+                {% endif %}
+            {% endfor %} 
+        </span>
+
+    </div>
+    <div class="botones">
+        <a href="?page=1" class="primera">&laquo;</a> <!-- Enlace a la primera página -->
+        {% if productos.has_previous %}
+            <a href="?page={{ productos.previous_page_number }}" class="anterior">&laquo; Anterior</a>
+        {% else %}
+            <span class="btn">&laquo; Anterior</span>
+        {% endif %}
+
+        {% if productos.has_next %}
+            <a href="?page={{ productos.next_page_number }}" class="siguiente">Siguiente &raquo;</a>
+        {% else %}
+            <span class="btn">Siguiente &raquo;</span>
+        {% endif %}
+            <a href="?page={{ productos.paginator.num_pages }}" class="ultima">&raquo;</a> <!-- Enlace a la última página -->
+        </div>
+</body>
+</html>
+{% endblock %}

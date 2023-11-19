@@ -1,0 +1,105 @@
+
+footer{
+    background-color: rgb(72, 71, 91);
+    font-family: arial; 
+    
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Divide el footer en tres columnas de igual tamaño */
+    gap: 5px; /* Espacio entre las columnas */
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+}
+@media (max-width: 768px){
+    .footerGrid{
+        grid-template-columns: 1fr;
+    }
+}
+/* Estilos para la sección de redes sociales */
+
+.redes_sociales {
+    margin-top: 25px; /* Espacio superior */
+    text-align: center;
+}
+
+/* Estilos para los íconos de redes sociales */
+.redes_sociales i {
+    vertical-align: middle; /* Alinea verticalmente los íconos */
+}
+
+/* Estilos para el ícono de Instagram */
+.redes_sociales .instagram {
+    color: #e4405f; /* Cambia el color del texto a blanco */
+}
+
+/* Estilos para el ícono de Facebook */
+.redes_sociales .facebook {
+    color: #1877f2; /* Cambia el color del texto a blanco */
+}
+
+/* Estilos para el ícono de Twitter */
+.redes_sociales .twitter {
+    color: #1da1f2; /* Cambia el color del texto a blanco */
+}
+
+/* Estilos para el ícono de WhatsApp */
+.redes_sociales .whatsapp {
+    color: #25d366; /* Cambia el color del texto a blanco */
+}
+
+/* Estilos comunes para todos los íconos de redes sociales */
+.redes_sociales a {
+    text-decoration: none;
+    font-size: 24px;
+    padding: 5px; /* Espacio interior alrededor del ícono */
+    margin: 20px; /* Espacio horizontal entre los enlaces */
+}
+
+/* Cambio de color al pasar el mouse */
+.redes_sociales a:hover {
+    opacity: 0.5; /* Reduce la opacidad al pasar el mouse */
+}
+
+/* Estilos para la sección de dirección */
+.direccion {
+    
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin-top: 35px; /* Espacio superior */
+    font-size: 18px; /* Tamaño de fuente del párrafo */
+    margin-right: 20px;
+    margin-left: 20px; 
+}
+
+/* Estilos para el párrafo de dirección */
+/* .direccion p {
+    color: white;
+    text-align: justify;
+} */
+
+.direccion h4{
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Estilos para la sección de logo */
+.logo {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para la imagen del logotipo */
+.logo img {
+    border-radius: 10px;
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    height: 120px;
+}
+
+.copy p{
+    color: white; /* Color del &copy*/
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 5px;   
+}

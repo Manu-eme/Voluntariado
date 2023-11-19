@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesContacto.css' %}">
+    
+</head>
+<body>
+    <h1>Contactanos</h1>
+    
+        <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+
+            {% if messages %}
+                {% for mensaje in messages %}
+                    <div class="alert alert-success" role="alert"> 
+                        {{mensaje}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <input type="hidden" name="espacio" value="">
+
+
+            <label for= "nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required>
+            <br>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <br>
+            
+            <label for="asunto">Asunto:</label>
+            <input type="text" name="asunto" id="asunto" required>
+            <br>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" rows="4" cols="50" required></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+            <br>
+            
+        </form>
+        
+</body>
+
+</html>
+{% endblock %}
+
