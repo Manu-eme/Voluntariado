@@ -1,4 +1,4 @@
-FROM python:3.11.4
+FROM python:3.12.0
 
 # Configura el entorno
 ENV PYTHONDONTWRITEBYTECODE 1
