@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 COPY . /app/
 
 # Comando para ejecutar la aplicación
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Voluntariado.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi:application"]
