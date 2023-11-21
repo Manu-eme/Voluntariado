@@ -1,3 +1,5 @@
+
+
 """
 Django settings for core project.
 
@@ -93,6 +95,20 @@ DATABASES = {
     }
 }
 
+# Obtén el nombre de la base de datos desde las variables de entorno
+db_name = os.environ.get('DB_NAME')
+# Verifica si db_name es None antes de construir la ruta
+if db_name is not None:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / db_name,
+        }
+    }
+else:
+    # Maneja el caso cuando DB_NAME es None
+    raise ValueError("DB_NAME no está definido en las variables de entorno.")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -147,6 +163,6 @@ if not DEBUG:
     EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', default=True)
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER') 
     EMAIL_HOST_PASSWORD =os.environ.get('EMAIL_HOST_PASSWORD') 
-     
+
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
