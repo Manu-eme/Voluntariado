@@ -88,16 +88,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / env('DB_NAME'),
-#     }
-# }
+
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='sqlite:///db.sqlite3',
         conn_max_age=600
     )
 }
@@ -141,6 +136,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -148,15 +147,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-if not DEBUG:
-    # Indica a Django que copie los archivos estáticos al directorio `staticfiles`
-    # en el directorio de tu aplicación en Render.
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-    # Habilita el almacenamiento WhiteNoise que se encarga de comprimir archivos estáticos
-    # y crear nombres únicos para cada versión, para que puedan almacenarse en caché de manera segura para siempre.
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    
+
 #Email
 
 EMAIL_BACKEND = env('EMAIL_BACKEND')
