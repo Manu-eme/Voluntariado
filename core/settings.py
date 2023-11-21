@@ -88,26 +88,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / os.environ.get('DB_NAME'),
-    }
-}
+DATABASES = {'default': env.db('DB')}
 
-# Obtén el nombre de la base de datos desde las variables de entorno
-db_name = os.environ.get('DB_NAME')
-# Verifica si db_name es None antes de construir la ruta
-if db_name is not None:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / db_name,
-        }
-    }
-else:
-    # Maneja el caso cuando DB_NAME es None
-    raise ValueError("DB_NAME no está definido en las variables de entorno.")
+
 
 
 # Password validation
