@@ -1,8 +1,6 @@
 FROM python:3.12.0
 
-# Configura el entorno
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+
 
 # Crea y configura el directorio de trabajo
 WORKDIR /app
