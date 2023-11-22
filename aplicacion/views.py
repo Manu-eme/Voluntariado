@@ -52,7 +52,8 @@ def contact(request):
             asunto,
             template,
             settings.EMAIL_HOST_USER,
-            ['comercializadorabvspaeme@gmail.com']
+            #['comercializadorabvspaeme@gmail.com']
+            ['otropais.eme@gmail.com']
         )
 
         email.fail_silently = False
