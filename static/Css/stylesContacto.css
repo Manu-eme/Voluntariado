@@ -15,7 +15,7 @@ h1{
   background-color: #53e385;
   font-size: 40px;
   text-align: center;
-  /*padding-top: 1px;*/
+  padding-top: 1px;
   padding-bottom: 20px;
   margin-bottom: 50px;
   font-weight: bolder;
@@ -88,6 +88,12 @@ form {
     input[type="submit"] {
       padding: 10px 105px;
       
+    }
+    h1{
+      font-size: 30px;
+    }
+    main{
+      position: fixed; 
     }
 
   }
