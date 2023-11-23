@@ -1,5 +1,5 @@
 body {
-  background-image: url('../../static/Img/img_empresa/background.png'); /* Ruta de la imagen de fondo formulario */
+  background-image: url('https://packagingdelsur-781u.onrender.com/static/Img/img_empresa/background.png'); /* Ruta de la imagen de fondo formulario */
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
   background-repeat: no-repeat; /* Evita la repetición de la imagen */
   background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
