@@ -2,7 +2,7 @@
 /* Estilos para el encabezado h1 */
 h2{
   background-color: #53e385;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   padding-top: 1px;
   padding-bottom: 20px;
@@ -29,13 +29,13 @@ ul {
 }
 
 /* Media queries para diseños responsivos */
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
   .product-grid {
       grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .product-grid {
       grid-template-columns: repeat(3, 1fr);
   }
