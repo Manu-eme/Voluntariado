@@ -77,6 +77,15 @@ form {
     font-weight: bold;
     font-size: 20px;
   }
+  @media (max-width: 2560px){
+    body {
+    background-size: contain;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+    background-position: center;
+    }
+  }
   
   @media (min-width: 320px) and (max-width: 425px){
     form {
@@ -90,13 +99,13 @@ form {
       
     }
     h1{
-      font-size: 30px;
+      font-size: 25px;
     }
-    main{
-      position: fixed; 
-    }
-
-  }
-
-
-  
+   
+    body {
+    background-size: contain;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+    background-position: center;
+    }}
