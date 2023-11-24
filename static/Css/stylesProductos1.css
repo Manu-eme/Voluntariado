@@ -65,8 +65,8 @@ h2{
   @media (max-width: 425px){
     .product-grid {
         grid-template-columns: 1fr;
-        margin-left: 75px;
-        margin-right: 75px;
+        margin-left: 60px;
+        margin-right: 80px;
     }
    
     
