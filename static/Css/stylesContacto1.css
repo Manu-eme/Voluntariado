@@ -1,99 +1,158 @@
-/*body {
-  /*background-image: url('/static/background.png'); /* Ruta de la imagen de fondo formulario */
-  /*background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
-  /*background-repeat: no-repeat; /* Evita la repetición de la imagen */
-  /*background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
-  /*background-position: center; /* Centra la imagen tanto vertical como horizontalmente */
-/*}*/
-main{
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
-  background-repeat: no-repeat; /* Evita la repetición de la imagen */
-  background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
-  background-position: center;
-}
-h1{
-  background-color: #53e385;
-  font-size: 40px;
-  text-align: center;
-  padding-top: 1px;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
-  font-weight: bolder;
-}
-form {
-    background-color: #ffffffd4;
-    padding: 20px; /* Espacio interno del formulario */
-    border: 1px solid #53e385; /* Borde del formulario */
-    border-radius: 10px; /* Bordes redondeados */
-    max-width: 400px; /* Ancho máximo del formulario */
-    margin: 0 auto; /* Centrar horizontalmente el formulario */
+/*-----------------------*/
+/* Estilos para el encabezado h1 */
+h2{
+    background-color: #53e385;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 20px;
     margin-bottom: 50px;
-  }
-  
-  /* Estilo de las etiquetas */
-  label {
-    display: block; /* Hace que las etiquetas se muestren en una nueva línea */
-    font-weight: bold; /* Texto de etiquetas en negrita */
-    margin-top: 20px; /* Espacio superior entre etiquetas */
-  }
-  
-  /* Estilo de los campos de entrada de texto y correo electrónico */
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%; /* Los campos de entrada ocupan todo el ancho del formulario */
-    padding: 10px; /* Espaciado interior de los campos */
-    margin: 5px 0; /* Espacio vertical entre campos */
-    border: 1px solid #53e385; /* Borde de los campos */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de fuente */
-  }
-  
-  /* Estilo del botón de enviar */
-  input[type="submit"] {
-    background-color: #53e385; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    padding: 10px 155px; /* Espaciado del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor de puntero al pasar el mouse */
-    font-size: 18px; /* Tamaño de fuente */
-    transition: 0.5s; /* Transición suave al pasar el mouse */
+    font-weight: bolder;
     
   }
-  
-  input[type="submit"]:hover {
-    color: white; /* Cambio de color al pasar el mouse */
-    background-color: black; /* Cambio de color de fondo al pasar el mouse */
+  /* Estilos generales para todo el documento */
+  ul {
+   
+    margin-left: 80px;
+    margin-right: 80px;
+    font-family: arial;  
   }
   
-  /* Estilo de las alertas de éxito */
-  .alert-success {
-    background-color: rgb(13, 247, 95); /* Color de fondo de las alertas de éxito */
-    color: black; /* Color del texto en las alertas */
-    padding: 10px; /* Espaciado interior de las alertas */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-top: 10px; /* Espacio superior entre alertas */
-    font-weight: bold;
+  /* Estilos para la lista de productos */
+  .product-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-gap: 40px;
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr); /* Diseño de 5 columnas por defecto */
+    margin: 0 auto; /* Centrar y establecer márgenes izquierdo y derecho iguales */
+    max-width: 2000px; /* Ajusta el valor según tus necesidades */
+  }
+  
+  /* Media queries para diseños responsivos */
+  @media (max-width: 1440px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        margin-left: 30px;
+        margin-right: 36px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 30px;
+        margin-right: 36px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 30px;
+        margin-right: 36px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        margin-left: 70px;
+        margin-right: 75px;
+    }
+  }
+  @media (max-width: 425px){
+    .product-grid {
+        grid-template-columns: 1fr;
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+   
+    
+    h2{
+      font-size: 22px;
+      padding-top: 10px;
+    }
+  }
+  @media (max-width: 375px){
+    h2{
+      font-size: 22px;
+      padding-top: 10px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+        margin-left: 55px;
+        margin-right: px;
+    }
+  }
+  @media (max-width: 320px){
+    h2{
+      font-size: 22px;
+      padding-top: 10px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+        margin-left: 25px;
+        margin-right: px;
+    }
+  }
+  /* Estilos para elementos de productos individuales */
+  .product-item {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    transition: box-shadow 0.4s; /* Agregar transición para la sombra */
+  }
+  
+  /* Estilos para la imagen del producto */
+  .product-item .imagen {
+    width: 200px;
+    max-width: 100%; /* Hace que la imagen sea responsiva y se adapte al ancho del contenedor */
+    height: 210px; /* Mantiene la proporción de la imagen */
+    max-height: 100%;
+    margin-bottom: 10px; /* Espacio entre la imagen y otros elementos */
+  }
+  
+  /* Estilos para el nombre del producto */
+  .product-item .nombre {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 18px; /* Tamaño de fuente */
+    color: #797777; /* Color del texto */
+  }
+  
+  /* Estilos para el precio del producto */
+  .product-item .precio {
+    text-align: center;
+    font-size: 20px;
+    color: #53e385;
+  }
+  
+  /* Estilos para el botón de producto */
+  .btn-product {
+    width: 250px;
+    height: 45px;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    background-color: #53e385;
     font-size: 20px;
   }
   
-  @media (min-width: 320px) and (max-width: 425px){
-    form {
-      padding: 20px; /* Espacio interno del formulario */
-      max-width: 300px; /* Ancho máximo del formulario */
-      margin: 0 auto; /* Centrar horizontalmente el formulario */
-      margin-bottom: 50px;
-    }
-    input[type="submit"] {
-      padding: 10px 105px;
-      
-    }
-    h1{
-      font-size: 30px;
-    }
-    main{
-      position: fixed; 
-    }
-
+  /* Estilos para los enlaces */
+  a {
+    color: white;
   }
+  
+  /* Estilos para el botón de producto al hacer hover */
+  .btn-product:hover {
+    background-color: black;
+  }
+  
+  /* Estilos para el producto al hacer hover */
+  .product-item:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Establecer la sombra al hacer hover */
+  }
+  
