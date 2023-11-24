@@ -86,11 +86,60 @@ form {
     background-position: center;
     }
   }
+  @media (max-width: 1440px){
+    body {
+    background-size: contain;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+    background-position: center;
+    }
+  }
+  @media (max-width: 1024px){
+    body {
+    background-size: contain;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+    background-position: center;
+    }
+  }
+  @media (max-width: 768px){
+    body {
+    background-size: contain;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+    background-position: center;
+    }
+  }
+  @media (max-width: 425px){
+    body {
+    background-size: contain;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+    background-position: center;
+    }
+     form {
+      padding: 20px; /* Espacio interno del formulario */
+      max-width: 350px; /* Ancho máximo del formulario */
+      margin: 0 auto; /* Centrar horizontalmente el formulario */
+      margin-bottom: 50px;
+    }
+    input[type="submit"] {
+      padding: 10px 105px;
+      
+    }
+    h1{
+      font-size: 28px;
+    }
+  }
   
-  @media (min-width: 320px) and (max-width: 425px){
+  @media (max-width: 375px){
     form {
       padding: 20px; /* Espacio interno del formulario */
-      max-width: 300px; /* Ancho máximo del formulario */
+      max-width: 320px; /* Ancho máximo del formulario */
       margin: 0 auto; /* Centrar horizontalmente el formulario */
       margin-bottom: 50px;
     }
@@ -109,3 +158,26 @@ form {
     background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
     background-position: center;
     }}
+    @media (max-width: 320px){
+      body {
+      background-size: contain;
+      background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+      background-repeat: no-repeat; /* Evita la repetición de la imagen */
+      background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+      background-position: center;
+      }
+       form {
+      padding: 20px; /* Espacio interno del formulario */
+      max-width: 300px; /* Ancho máximo del formulario */
+      margin: 0 auto; /* Centrar horizontalmente el formulario */
+      margin-bottom: 50px;
+    }
+    input[type="submit"] {
+      padding: 10px 105px;
+      
+    }
+    h1{
+      font-size: 25px;
+    }
+    }
+    
